@@ -1,4 +1,5 @@
 import React from 'react';
+import Players from '../components/Players';
 
 class PlayersContainer extends React.Component {
 
@@ -6,7 +7,7 @@ class PlayersContainer extends React.Component {
 
     return (
       <div>
-        PlayersContainer
+        <Players/>
       </div>
     )
   }
