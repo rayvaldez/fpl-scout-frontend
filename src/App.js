@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {fetchPlayers} from './actions/fetchPlayers';
 import PlayersContainer from './containers/PlayersContainer';
 import CommentsContainer from './containers/CommentsContainer';
 import './App.css';
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchPlayers()
+  }
 
   render() {
     return (
@@ -17,4 +22,10 @@ class App extends React.Component {
   }
 }
 
-export default connect()(App);
+const mapStateToProps = state => {
+  return {
+    players: state.players
+  }
+}
+
+export default connect(mapStateToProps, {fetchPlayers})(App);
