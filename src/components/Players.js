@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Players = (props) => {
+const Players = ({players}) => {
 
   return (
     <div>
-      Players
+      {players.map(player => <li key={player.id}>{player.first_name} {player.second_name} </li>)}
     </div>
   )
 }
