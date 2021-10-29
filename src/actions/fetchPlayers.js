@@ -8,8 +8,3 @@ export function fetchPlayers() {
     }));
   };
 }
-
-  // fetch('http://localhost:3001/api/v1/players/')
-  // .then(response => response.json())
-  // .then(data => console.log(data))
-// }
