@@ -14,7 +14,7 @@ class PlayersContainer extends React.Component {
     return (
       <div>
         <h5>PlayersContainer</h5>
-        <Player players={this.props.players}/>
+        <Players players={this.props.players}/>
       </div>
     )
   }
