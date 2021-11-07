@@ -1,6 +1,7 @@
 import React from 'react';
 import Player from './Player';
 import Table from './Table';
+import DefaultColumnFilter from './DefaultColumnFilter';
 
 const Players = ({players}) => {
 
@@ -12,46 +13,52 @@ const Players = ({players}) => {
           {
             Header: 'Name',
             accessor: 'web_name',
+            filter: 'fuzzyText',
           },
           {
             Header: 'Cost',
             accessor: 'now_cost',
-          },
-          {
-            Header: 'Position',
-            accessor: 'element_type',
+            disableFilters: true,
           },
           {
             Header: 'Team',
             accessor: 'team',
+            disableFilters: true,
           },
           {
             Header: 'Influence',
-            accessor: 'influence_rank'
+            accessor: 'influence_rank',
+            disableFilters: true,
           },
           {
             Header: 'Creativity',
-            accessor: 'creativity_rank'
+            accessor: 'creativity_rank',
+            disableFilters: true,
           },
           {
             Header: 'Threat',
-            accessor: 'threat_rank'
+            accessor: 'threat_rank',
+            disableFilters: true,
           },
           {
             Header: 'ICT Rank',
-            accessor: 'ict_index_rank'
+            accessor: 'ict_index_rank',
+            disableFilters: true,
           },
           {
             Header: 'Bonus',
-            accessor: 'bonus'
+            accessor: 'bonus',
+            disableFilters: true,
           },
           {
             Header: 'Dream Team',
-            accessor: 'dreamteam_count'
+            accessor: 'dreamteam_count',
+            disableFilters: true,
           },
           {
             Header: 'Total Points',
-            accessor: 'total_points'
+            accessor: 'total_points',
+            disableFilters: true,
           },
         ],
       },
