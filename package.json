@@ -12,6 +12,7 @@
     "browserslist": "^4.16.5",
     "glob-parent": "^5.1.2",
     "immer": "^9.0.6",
+    "match-sorter": "^6.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
