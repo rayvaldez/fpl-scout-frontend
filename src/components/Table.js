@@ -1,8 +1,39 @@
 import React from 'react';
-import { useTable, useGlobalFilter, usePagination } from "react-table";
+import { useTable, useGlobalFilter,useFilters, useSortBy, usePagination  } from "react-table";
 import GlobalFilter from './GlobalFilter';
+import fuzzyTextFilterFn from './FuzzyTextFilterFn';
+import DefaultColumnFilter from './DefaultColumnFilter';
+import matchSorter from 'match-sorter';
 
 function Table({ columns, data }) {
+
+  const filterTypes = React.useMemo(
+    () => ({
+      // Add a new fuzzyTextFilterFn filter type.
+      fuzzyText: fuzzyTextFilterFn,
+      // Or, override the default text filter to use
+      // "startWith"
+      text: (rows, id, filterValue) => {
+        return rows.filter(row => {
+          const rowValue = row.values[id]
+          return rowValue !== undefined
+            ? String(rowValue)
+                .toLowerCase()
+                .startsWith(String(filterValue).toLowerCase())
+            : true
+        })
+      },
+    }),
+    []
+  )
+
+  const defaultColumn = React.useMemo(
+    () => ({
+      // Let's set up our default Filter UI
+      Filter: DefaultColumnFilter,
+    }),
+    []
+  )
 
   const {
     getTableProps,
@@ -29,10 +60,14 @@ function Table({ columns, data }) {
     {
       columns,
       data,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex: 0 },
+      defaultColumn,
+      filterTypes
     },
+    useFilters,
     useGlobalFilter,
-    usePagination,
+    useSortBy,
+    usePagination
   )
 
   const { globalFilter } = state
@@ -45,11 +80,19 @@ function Table({ columns, data }) {
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render('Header')}
+                  <div>{column.canFilter ? column.render('Filter') : null}</div>
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? ' 🔽'
+                        : ' 🔼'
+                      : ''}
+                  </span>
+                </th>
               ))}
             </tr>
           ))}
-          <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
         </thead>
         <tbody {...getTableBodyProps()}>
           {page.map((row, i) => {
