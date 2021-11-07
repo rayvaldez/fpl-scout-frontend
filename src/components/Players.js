@@ -25,6 +25,34 @@ const Players = ({players}) => {
             Header: 'Team',
             accessor: 'team',
           },
+          {
+            Header: 'Influence',
+            accessor: 'influence_rank'
+          },
+          {
+            Header: 'Creativity',
+            accessor: 'creativity_rank'
+          },
+          {
+            Header: 'Threat',
+            accessor: 'threat_rank'
+          },
+          {
+            Header: 'ICT Rank',
+            accessor: 'ict_index_rank'
+          },
+          {
+            Header: 'Bonus',
+            accessor: 'bonus'
+          },
+          {
+            Header: 'Dream Team',
+            accessor: 'dreamteam_count'
+          },
+          {
+            Header: 'Total Points',
+            accessor: 'total_points'
+          },
         ],
       },
     ],
