@@ -4,6 +4,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { combineReducers } from 'redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 import playerReducer from './reducers/playerReducer';
 import commentReducer from './reducers/commentReducer';
 import './index.css';
@@ -17,7 +18,9 @@ let store = createStore( combineReducers({players:  playerReducer, comments: com
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
