@@ -14,6 +14,7 @@ const Players = ({players}) => {
             Header: 'Name',
             accessor: 'web_name',
             filter: 'fuzzyText',
+            Cell: e =><a href={`/players/${e.row.id}`}> {e.value} </a>
           },
           {
             Header: 'Cost',
