@@ -1,4 +1,5 @@
 import React from 'react';
+import Team from './Team';
 
 
 const Player = (props) => {
@@ -9,7 +10,9 @@ const Player = (props) => {
     <div>
       {player ?
         <div>
+          <img src={`http://resources.premierleague.com/premierleague/photos/players/110x140/p${player.photo.substring(0, player.photo.length-4)}.png`} alt={`${player.web_name}`}/>
           <h4>{player.first_name} {player.second_name}</h4>
+          <Team team={player.team}/>
         </div>
       : <div>Loading...</div>}
     </div>
