@@ -10,8 +10,6 @@ class App extends React.Component {
       <div className="App">
         <h1>Fantasy Premier League Scout</h1>
         <PlayersContainer/>
-        {/*<Players players={this.props.players}/>*/}
-        <CommentsContainer/>
       </div>
     );
   }
