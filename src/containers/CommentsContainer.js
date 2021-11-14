@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import Comments from '../components/Comments';
 import CommentInput from '../components/CommentInput';
 import { fetchComments } from '../actions/fetchComments';
@@ -13,9 +14,8 @@ class CommentsContainer extends React.Component {
   render() {
     return (
       <div>
-        <h5>CommentContainer</h5>
         <Comments/>
-        <CommentInput/>
+        <Route path='/players/:id' component={CommentInput} ></Route>
       </div>
     );
   };
