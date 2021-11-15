@@ -14,7 +14,7 @@ class CommentsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Comments/>
+        <Route path='/players/:id' render={(routerProps) => <Comments {...routerProps} comments={this.props.comments}/>}/>
         <Route path='/players/:id' component={CommentInput} ></Route>
       </div>
     );
