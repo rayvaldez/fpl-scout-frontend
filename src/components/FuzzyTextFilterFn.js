@@ -1,4 +1,3 @@
-import React from 'react';
 import { matchSorter } from 'match-sorter';
 
 const fuzzyTextFilterFn = (rows, id, filterValue) => {

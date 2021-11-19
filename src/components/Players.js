@@ -1,7 +1,5 @@
 import React from 'react';
-import Player from './Player';
 import Table from './Table';
-import DefaultColumnFilter from './DefaultColumnFilter';
 
 const Players = ({players}) => {
 
