@@ -6,7 +6,7 @@ class CommentInput extends React.Component {
 
   state = {
     text: '',
-    gameweek: '',
+    name: '',
     player_id: ''
   };
 
@@ -21,7 +21,7 @@ class CommentInput extends React.Component {
     this.props.addComment(this.state);
     this.setState({
       comment: '',
-      gameweek: ''
+      name: ''
     });
   };
 
@@ -29,8 +29,8 @@ class CommentInput extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Gameweek:</label>
-          <input type="number" name="gameweek" min="1" max="38" value={this.state.gameweek} onChange={this.handleChange}/><br/><br/>
+          <label>Name:</label>
+          <input name="name" value={this.state.name} onChange={this.handleChange}/><br/><br/>
           <label>Comment:</label><br/>
           <textarea name="text" value={this.state.comment} onChange={this.handleChange} rows="8" cols="80" placeholder="Leave a comment..."/><br/>
           <input type="submit" placeholder="Submit"/>
