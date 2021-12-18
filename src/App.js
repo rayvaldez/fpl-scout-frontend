@@ -1,6 +1,7 @@
 import React from 'react';
 import PlayersContainer from './containers/PlayersContainer';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
 
