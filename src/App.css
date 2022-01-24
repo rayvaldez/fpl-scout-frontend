@@ -1,14 +1,117 @@
 .App {
-  text-align: center;
-}
-
-.App {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
+}
+
+.header-main {
+  padding: 0.9em;
+}
+
+.logo-div {
+  width: 10%;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+#logo {
+  height: 160px;
+  width: 380px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.navbar {
+  margin-left: 210px;
+  margin-top: -56px;
+  border-radius: 10px;
+  padding-right: 260px;
+}
+
+#players {
+  color: black;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#players th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2b1140;
+  color: white;
+  border: 2px solid #693791;
+  border-radius: 2px;
+}
+
+#players tr:nth-child(even){background-color: #f2f2f2;}
+
+#players tr:nth-child(odd){background-color: #ddd;}
+
+#players td {
+  border: 1px solid #e8e8e8;
+}
+
+.pagination {
+  margin: auto;
+  width: 50%;
+  padding-bottom: 70px;
+}
+
+#player-details {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#player-image-box {
+  color: black;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 45px;
+  border: 7px solid #1fa160;
+  background-color: #f2f2f2;
+}
+
+#player-detail-box {
+  color: black;
+  border-radius: 45px;
+  border: 7px solid #1fa160;
+  background-color: #f2f2f2;
+}
+
+#player-table {
+  margin-top: 26px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#player-table td {
+  padding: 3px;
+}
+
+#player-table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.comments {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid#f2f2f2;
+}
+
+#commentText {
+  font: 18px Georgia, serif;
+  border-bottom: 1px dotted #f2f2f2;
+  padding-bottom: 30px;
+}
+
+.commentInput {
+  padding-top: 25px;
+  padding-bottom: 50px;
 }
