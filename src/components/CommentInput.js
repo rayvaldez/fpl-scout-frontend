@@ -23,16 +23,17 @@ class CommentInput extends React.Component {
       comment: '',
       name: ''
     });
+
   };
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="commentInput" onSubmit={this.handleSubmit}>
           <label>Name:</label>
           <input name="name" value={this.state.name} onChange={this.handleChange}/><br/><br/>
           <label>Comment:</label><br/>
-          <textarea name="text" value={this.state.comment} onChange={this.handleChange} rows="8" cols="80" placeholder="Leave a comment..."/><br/>
+          <textarea name="text" value={this.state.comment} onChange={this.handleChange} rows="4" cols="60" placeholder="Leave a comment..."/><br/>
           <input type="submit" placeholder="Submit"/>
         </form>
       </div>

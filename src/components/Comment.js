@@ -4,7 +4,8 @@ const Comment = (props) => {
 
   return(
     <div>
-      {props.comment.text}
+      <h6>Posted by {props.comment.name}</h6>
+      <p id="commentText">{props.comment.text}</p>
     </div>
   )
 }

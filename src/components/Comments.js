@@ -5,10 +5,11 @@ const Comments = (props) => {
 
   const playerId = props.match.params.id
   const allComments = props.comments.comments
-  let sorted = allComments.filter(comment => comment.player_id == props.match.params.id)
+  let sorted = allComments.filter(comment => comment.player_id == playerId)
 
   return (
-    <div>
+    <div className="comments">
+      <h4>Comments</h4>
       {sorted.map(comment =>
         <div key={comment.id}>
           <Comment comment={comment} player={playerId} />

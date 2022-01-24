@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTable, useGlobalFilter,useFilters, useSortBy, usePagination  } from "react-table";
-import GlobalFilter from './GlobalFilter';
+import { useTable, useFilters, useSortBy, usePagination  } from "react-table";
 import fuzzyTextFilterFn from './FuzzyTextFilterFn';
 import DefaultColumnFilter from './DefaultColumnFilter';
-import matchSorter from 'match-sorter';
 
 function Table({ columns, data }) {
 
@@ -41,12 +39,6 @@ function Table({ columns, data }) {
     headerGroups,
     prepareRow,
     page,
-    state,
-    setGlobalFilter,
-    // Instead of using 'rows', we'll use page,
-    // which has only the rows for the active page
-
-    // The rest of these things are super handy, too ;)
     canPreviousPage,
     canNextPage,
     pageOptions,
@@ -65,17 +57,14 @@ function Table({ columns, data }) {
       filterTypes
     },
     useFilters,
-    useGlobalFilter,
     useSortBy,
     usePagination
   )
 
-  const { globalFilter } = state
-
   // Render the UI for your table
   return (
     <>
-      <table {...getTableProps()}>
+      <table id="players" {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -85,8 +74,8 @@ function Table({ columns, data }) {
                   <span>
                     {column.isSorted
                       ? column.isSortedDesc
-                        ? ' 🔽'
-                        : ' 🔼'
+                        ? ' ˇ'
+                        : ' ˆ'
                       : ''}
                   </span>
                 </th>

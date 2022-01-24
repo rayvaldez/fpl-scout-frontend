@@ -20,11 +20,6 @@ const Players = ({players}) => {
             disableFilters: true,
           },
           {
-            Header: 'Team',
-            accessor: 'team',
-            disableFilters: true,
-          },
-          {
             Header: 'Influence',
             accessor: 'influence_rank',
             disableFilters: true,
