@@ -9,9 +9,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="logo-div">
-        <img id="logo" src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Fantasy Scout"/>
-        </div>
         <Navigation/>
         <PlayersContainer/>
       </div>

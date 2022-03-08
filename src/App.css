@@ -1,35 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 .App {
-  background-color: #282c34;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(8px + 2vmin);
+  font-size: 1em;
   color: white;
+  padding-top: 0.5em;
 }
 
 .header-main {
   padding: 0.9em;
 }
 
-.logo-div {
-  width: 10%;
-  padding-top: 20px;
-  padding-left: 60px;
-}
-
 #logo {
-  height: 160px;
-  width: 380px;
-  padding: 20px;
-  margin-bottom: 40px;
-}
-
-.navbar {
-  margin-left: 210px;
-  margin-top: -56px;
-  border-radius: 10px;
-  padding-right: 260px;
+  font-family: 'Carter One', cursive;
+  font-size: 2em;
+  margin-top: -0.5em;
+  padding-bottom: 1em;
 }
 
 #players {
@@ -65,28 +57,30 @@
 }
 
 #player-details {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 0;
+  padding-bottom: 1em;
 }
 
 #player-image-box {
+  margin-left: 4em;
   color: black;
-  padding-left: 10px;
-  padding-top: 10px;
-  border-radius: 45px;
-  border: 7px solid #1fa160;
-  background-color: #f2f2f2;
+  padding-left: 1em;
+  padding-top: 1em;
+  border-radius: 10px;
+  border: 5px solid #1fa160;
+  background-color: #fefefe;
 }
 
 #player-detail-box {
   color: black;
-  border-radius: 45px;
-  border: 7px solid #1fa160;
-  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: 5px solid #1fa160;
+  background-color: #fefefe;
+  margin-left: 4em;
 }
 
 #player-table {
-  margin-top: 26px;
+  margin-top: 3em;
   border-collapse: collapse;
   width: 100%;
 }
