@@ -23,13 +23,18 @@ function Navigation() {
             className="me-auto"
             navbar
           >
+          <NavItem>
+            <NavLink href="/home" id="logo">
+              FPL Scout
+            </NavLink>
+          </NavItem>
             <NavItem>
               <NavLink href="/players/">
                 Home
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink href="/">
                 About
               </NavLink>
             </NavItem>
